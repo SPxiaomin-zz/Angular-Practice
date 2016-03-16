@@ -1,0 +1,45 @@
+<h2>Edit Recipe</h2>
+
+<form name="recipeForm" ng-submit="save()" class="form-horizontal">
+    <div class="form-group">
+        <label for="title" class="col-sm-2 control-label">Title:</label>
+        <div class="col-sm-10">
+            <input ng-model="recipe.title" class="form-control" focus required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="description" class="col-sm-2 control-label">Description:</label>
+        <div class="col-sm-10">
+            <textarea ng-model="recipe.description" class="form-control" rows="5"></textarea>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="ingredients" class="col-sm-2 control-label">Ingredients:</label>
+        <div class="col-sm-10">
+            <ul ng-controller="IngredientsCtrl" class="list-unstyled">
+                <li ng-repeat="ingredient in recipe.ingredients">
+                    <input ng-model="ingredient.amount" class="form-control horizontal-input">
+                    <input ng-model="ingredient.amountUnits" class="form-control horizontal-input">
+                    <input ng-model="ingredient.ingredientName" class="form-control horizontal-input">
+                    <button type="button" ng-click="removeIngredient($index)" class="btn btn-danger">Delete</button>
+                </li>
+                <button type="button" ng-click="addIngredient()" class="btn btn-primary mt-10">Add</button>
+            </ul>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="instructions" class="col-sm-2 control-label">Instructions:</label>
+        <div class="col-sm-10">
+            <textarea ng-model="recipe.instructions" class="form-control" rows="5"></textarea>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button class="btn btn-success" ng-disabled="recipeForm.$invalid">Save</button>
+        </div>
+    </div>
+</form>

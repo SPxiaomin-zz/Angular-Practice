@@ -1,0 +1,23 @@
+{
+  "name": "angularjs-book-guthub",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "gujunmin <3013366498@qq.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-route": "^1.5.0",
+    "angular-resource": "^1.5.0"
+  }
+}

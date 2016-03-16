@@ -1,0 +1,9 @@
+.mt-10 {
+    margin-top: 10px;
+}
+
+.horizontal-input {
+    display: inline-block;
+
+    width: 29%;
+}
